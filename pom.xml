@@ -92,6 +92,11 @@
             <artifactId>spring-boot-starter-validation</artifactId>
             <version>2.5.6</version>
         </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.9.2</version>
+        </dependency>
 
     </dependencies>
 

@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Data
 @Entity
@@ -20,6 +21,8 @@ public class Post {
     private Long id;
     private String title;
     private String body;
+    private Date date;
+    private String categories;
 
     public String getPreview(int symbols) {
         if (getBody().length() > symbols) {

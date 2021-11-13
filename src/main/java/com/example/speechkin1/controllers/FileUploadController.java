@@ -20,7 +20,13 @@ public class FileUploadController {
 
     @PostMapping("")
     public String handleFileUpload(@ModelAttribute("file") MultipartFile file) {
-        postDAO.addPost(file);
+        try {
+            postDAO.addPost(file);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            return "/posts/newPost";
+        }
+
         return "redirect:/posts";
     }
 }
